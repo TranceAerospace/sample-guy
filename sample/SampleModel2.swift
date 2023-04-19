@@ -1,9 +1,9 @@
-//
-//  SampleModel2.swift
-//  sample
-//
-//  Created by Mark Trance on 4/18/23.
-//
+    //
+    //  SampleModel2.swift
+    //  sample
+    //
+    //  Created by Mark Trance on 4/18/23.
+    //
 
 import SwiftUI
 
@@ -22,11 +22,14 @@ class SampleModel2: ObservableObject, Identifiable {
     }
 }
 
-extension SampleModel2 {
-    static let examples2: [SampleModel2] = [
-        .init(title: "Notification1", imageName: "gear", isToggled: false, description: "Description for first notification"),
-        .init(title: "Notification2", imageName: "gear", isToggled: true, description: "Description for 2nd notification"),
-        .init(title: "Notification3", imageName: "gear", isToggled: false, description: "Description for 3rd notification"),
-        
-    ]
+class ModelStore {
+    var allModels = [SampleModel2]()
+    
+    func createItems() {
+        allModels = [
+            .init(title: "Notification1", imageName: "gear", isToggled: false, description: "Description for first notification"),
+            .init(title: "Notification2", imageName: "gear", isToggled: true, description: "Description for 2nd notification"),
+            .init(title: "Notification3", imageName: "gear", isToggled: false, description: "Description for 3rd notification"),
+        ]
+    }
 }

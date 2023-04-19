@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var sampleModels = SampleModel2.examples2
+    var sampleModels = ModelStore()
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ForEach(sampleModels) { item in
+                    ForEach(sampleModels.allModels) { item in
                         SwiftUIView(model: item)
                     }
                 }
