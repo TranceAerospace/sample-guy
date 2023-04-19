@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var sampleModel = SampleModel.examples
+    @State private var sampleModels = SampleModel2.examples2
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ForEach(0..<sampleModel.count, id: \.self) { i in
-                        SwiftUIView(model: $sampleModel[i])
+                    ForEach(sampleModels) { item in
+                        SwiftUIView(model: item)
                     }
                 }
                 .padding()
