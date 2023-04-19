@@ -27,6 +27,7 @@ extension SampleModel2 {
         .init(title: "Notification1", imageName: "gear", isToggled: false, description: "Description for first notification"),
         .init(title: "Notification2", imageName: "gear", isToggled: true, description: "Description for 2nd notification"),
         .init(title: "Notification3", imageName: "gear", isToggled: false, description: "Description for 3rd notification"),
+     
         
     ]
 }
